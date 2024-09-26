@@ -13,6 +13,7 @@ Please find the sectional links for the project below:
 - [Tools used & Methodologies implemented](#tools-used)
 - [About the Dataset](#about-the-dataset)
   - [Data Sources](#data-sources)
+  - [Data Dictionary](#data-dictionary)
   - [Data Integrity](#data-integrity)
 - [Data Model](#data-model)
 - [Project Implementation](#project-implementation)
@@ -55,6 +56,9 @@ The objective of this project is to analyze Adidas US Sales data for 2020-21 by 
 ### Data Sources:
 The [Adidas US Sales Dataset](https://www.kaggle.com/datasets/sagarmorework/adidas-us-sales) contains a single CSV file with a single table namely: dim_customer.csv: 9641 records | 13 columns.
 
+### Data Dictionary:
+[Link to the Data Dictionary Documentation](https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Data%20Model/Data%20Dictionary.md)
+
 ## Data Integrity:
 ROCCC Evaluation:
 - Reliability: MED - The raw dataset is created and updated on Kaggle with a usability score of 9.31. It has a single 1.07 Mb CSV file.
@@ -63,11 +67,12 @@ ROCCC Evaluation:
 - Current: LOW - Dataset is from FY 2020 to 2021 data i.e almost 4 years old. So its not very relevant.
 - Citation: LOW - Official citation/reference not available.
 
-### Data Dictionary:
-[Link to the Data Dictionary Documentation](https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Data%20Model/Data%20Dictionary.md)
-
 ---
 
+## Data Model:
+<div align="center"> <img src="" width="100%" height="100%"> </div>
+
+---
 
 
 
