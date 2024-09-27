@@ -70,7 +70,7 @@ ROCCC Evaluation:
 ---
 
 ## Data Model:
-<div align="center"> <img src="" width="100%" height="100%"> </div>
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Data%20Model/Adidas%20US%20Sales%20Data%20Model.PNG" width="100%" height="100%"> </div>
 
 ---
 
