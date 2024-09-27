@@ -29,7 +29,7 @@ Please find the sectional links for the project below:
 
 ## Project Objective:
 
-The objective of this project is to analyze Adidas US Sales data for 2020-21 by cleaning and organizing the dataset in MySQL Workbench, performing Exploratory Data Analysis (EDA) using Python and creating an interactive Power BI dashboard. The goal is to provide actionable insights into retailer performance, regional sales distribution, and sales trends across various channels to optimize business strategies and drive growth.
+The objective of this project is to analyze mock Adidas US Sales data for 2020-21 by cleaning and organizing the dataset in MySQL Workbench, performing Exploratory Data Analysis (EDA) using Python and creating an interactive Power BI dashboard. The goal is to provide actionable insights into retailer performance, regional sales distribution, and sales trends across various channels to optimize business strategies and drive growth.
 
 ---
 
@@ -43,9 +43,9 @@ The objective of this project is to analyze Adidas US Sales data for 2020-21 by 
 1. Data Cleaning: **CRUD Operations, Power Query**
 2. Data Manipulation: **DAX Measures & Columns, Parameters**
 3. Data Modelling
-4. Exploratory Data Analysis
+4. Exploratory Data Analysis: **Jupyter Python 3 Libraries used: Numpy, Pandas, Matplotlib, Seaborn, Plotly, DateTime**
 5. Data Visualization: **Conditional Formatting**
-6. Dashboarding: **Filters, Custom Icon Buttons, Slicers, Bookmarks, Page Navigation**
+6. Dashboarding: **Filters, Custom Icon Buttons, Slicers, Bookmarks**
 7. Report Publishing: **PBI Service and Report Optimization**
 8. Documentation
 
@@ -54,7 +54,7 @@ The objective of this project is to analyze Adidas US Sales data for 2020-21 by 
 ## About the Dataset:
 
 ### Data Sources:
-The [Adidas US Sales Dataset](https://www.kaggle.com/datasets/sagarmorework/adidas-us-sales) contains a single CSV file with a single table namely: dim_customer.csv: 9641 records | 13 columns.
+The [Adidas US Sales Kaggle Dataset](https://www.kaggle.com/datasets/sagarmorework/adidas-us-sales) contains a single CSV file with a single table namely: dim_customer.csv: 9641 records | 13 columns.
 
 ### Data Dictionary:
 [Link to the Data Dictionary Documentation](https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Data%20Model/Data%20Dictionary.md)
