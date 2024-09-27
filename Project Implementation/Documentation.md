@@ -33,5 +33,114 @@ USE adidas;
 
 - All original 9641 sales records were imported in the sales table.
 
+---
+
+## Phase 2: Data Cleaning
+
+1. Reviewed size of dataset.
+```sql
+-- 2. Reviewed size of dataset.
+SELECT COUNT(*) FROM sales; -- 9641 records
+```
+
+2. An initial glance of the dataset, shows presence of special characters and unwanted spaces in the name of the columns. To fix this, I changed the name of the columns.
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Data%20Cleaning%20Images/Initial%20Column%20Names.PNG" width="50%" height="50%"> </div>
+
+3. Since some column names contain spaces they need to be enclosed in ticks when querying.
+```sql
+-- 3. Change column names to remove special charaters and unwanted spaces.
+ALTER TABLE sales RENAME COLUMN ï»¿Retailer TO retailer;
+ALTER TABLE sales RENAME COLUMN `Retailer ID` TO retailer_id;
+ALTER TABLE sales RENAME COLUMN `Invoice Date` TO invoice_date;
+ALTER TABLE sales RENAME COLUMN Region TO region;
+ALTER TABLE sales RENAME COLUMN State TO state;
+ALTER TABLE sales RENAME COLUMN City TO city;
+ALTER TABLE sales RENAME COLUMN Product TO product;
+ALTER TABLE sales RENAME COLUMN `Price per Unit` TO price_per_unit;
+ALTER TABLE sales RENAME COLUMN `Units Sold` TO units_sold;
+ALTER TABLE sales RENAME COLUMN `Total Sales` TO total_sales;
+ALTER TABLE sales RENAME COLUMN `Operating Profit` TO operating_profit;
+ALTER TABLE sales RENAME COLUMN `Sales Method` TO sales_method;
+```
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Data%20Cleaning%20Images/Final%20Column%20Names.PNG" width="50%" height="50%"> </div>
+
+4. Checked for NULL values in the dataset. No NULL values were found.
+```sql
+-- 4. Checked for NULL values in the dataset. No NULL values were found.
+SELECT * FROM sales
+WHERE retailer IS NULL OR retailer_id IS NULL
+			OR invoice_date IS NULL
+			OR region IS NULL OR state IS NULL OR city IS NULL
+			OR product IS NULL OR price_per_unit IS NULL
+			OR units_sold IS NULL OR total_sales IS NULL
+			OR operating_profit IS NULL OR sales_method IS NULL;
+```
+
+5. Before I check for empty and ‘0’ values, it is essential that the columns have the correct datatype and formatting.
+```sql
+-- 5. Checked column data types. Can also be done using i icon for table info.
+SELECT COLUMN_NAME, DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'sales';
+```
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Data%20Cleaning%20Images/Initial%20Column%20Datatypes.PNG" width="20%" height="20%"> </div>
+
+6. Columns such as retailer_id, invoice_date, price_per_unit, units_sold, total_sales and operating_profit were incorrectly set as text data types. They need to be corrected to respective int and date data types.
+
+7. Conversion of retailer_id column from text to int data type.
+```sql
+-- 6. Conversion of retailer_id column from text to int data type.
+ALTER TABLE sales MODIFY COLUMN retailer_id int;
+```
+
+8. Conversion of total_sales column from text to int data type: The column contains comma character in value which needs to be removed before converting it into integer data type.
+```sql
+-- 7. Conversion of total_sales column from text to int data type. Replace unwanted comma character.
+UPDATE sales SET total_sales = REPLACE(total_sales, ',', '');
+ALTER TABLE sales MODIFY COLUMN total_sales int;
+```
+
+9. Conversion of operating_profit column from text to int data type: The column contains comma and dollar character in value which needs to be removed before converting it into integer data type.
+```sql
+-- 8. Conversion of operating_profit column from text to int data type. Replace unwanted comma & dollar characters.
+UPDATE sales SET operating_profit = REPLACE(REPLACE(operating_profit, '$', ''), ',', '');
+ALTER TABLE sales MODIFY COLUMN operating_profit int;
+```
+
+10. I get errors when converting data types for units_sold and price_per_unit columns due to the presence of empty and 0 values. Hence I’ll need to either remove or impute these records.
+
+11. Checked for Empty and ‘0’ values in the dataset.
+```sql
+-- 9. Checked for Empty and '0' values in the dataset.
+SELECT * FROM sales
+WHERE retailer = '' OR retailer_id = '' OR retailer_id = 0
+	OR invoice_date = '' OR invoice_date = 0
+	OR region = '' OR state = '' OR city = ''
+	OR product = '' OR price_per_unit = '' OR price_per_unit = 0 
+	OR units_sold = '' OR units_sold = 0
+	OR total_sales = '' OR total_sales = 0
+	OR operating_profit = '' OR operating_profit = 0
+	OR sales_method = '';
+```
+
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Data%20Cleaning%20Images/Empty%20and%200%20values.PNG" width="70%" height="70%"> </div>
+
+12. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
