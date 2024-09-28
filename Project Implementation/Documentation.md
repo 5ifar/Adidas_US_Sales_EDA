@@ -4,6 +4,7 @@
 
 ## Phases of Implementation
 - [Phase 1: Data Import](#phase-1-data-import)
+- [Phase 2: Data Cleaning](#phase-2-data-cleaning)
 
 ---
 
@@ -121,7 +122,7 @@ WHERE retailer = '' OR retailer_id = '' OR retailer_id = 0
 	OR sales_method = '';
 ```
 
-<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Data%20Cleaning%20Images/Empty%20and%200%20values.PNG" width="100%" height="100%"> </div>
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Data%20Cleaning%20Images/Empty%20and%200%20values.PNG" width="70%" height="70%"> </div>
 
 12. Since 0 value units_sold column basically indicates no sale I can delete these records. However I’ll not delete the empty values in price_per_unit column since these can be calculated by dividing total_sales and units_sold columns once they have appropriate datatypes for arithmetic operations.
 
@@ -185,7 +186,79 @@ ALTER TABLE sales MODIFY COLUMN product varchar(100);
 ALTER TABLE sales MODIFY COLUMN sales_method varchar(30);
 ```
 
-20. 
+20. While calculating values for empty price_per_unit rows, I noticed for some records the total_sales value was not the product of price_per_unit and units_sold values. I queried this discrepancy.
+```sql
+-- 17. Checked for total_sales value discrepancy.
+SELECT * FROM sales WHERE total_sales != price_per_unit * units_sold; -- 5758 records
+```
+Updated the value of total sales.
+```sql
+-- 18. Updated the total_sales column values.
+UPDATE sales SET total_sales = price_per_unit * units_sold;
+```
+
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Data%20Cleaning%20Images/Final%20Total%20Sales%20Values.PNG" width="70%" height="70%"> </div>
+
+21. Inspected all text data type columns for value discrepancies.
+```sql
+-- 19. Inspected all text data type columns for value discrepancies. Spelling discrepancy was found in product column.
+SELECT DISTINCT(retailer) FROM sales;
+SELECT DISTINCT(region) FROM sales;
+SELECT DISTINCT(state) FROM sales;
+SELECT DISTINCT(city) FROM sales;
+SELECT DISTINCT(product) FROM sales;
+SELECT DISTINCT(sales_method) FROM sales;
+```
+
+22. Discovered two similar products in the product column with a spelling discrepancy , causing MySQL to treat them as different values. Fixed the spelling.
+```sql
+-- 20. Fixed the product column misspelled value.
+UPDATE sales SET product = "Men's Apparel" WHERE product = "Men's aparel";
+```
+
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Data%20Cleaning%20Images/Product%20Column%20Discrepancy.PNG" width="20%" height="20%"> </div>
+
+23. Trimmed all the text datatype categorical columns to remove any existing visible/invisible white, leading and trailing spaces.
+```sql
+-- 21. Trimmed any existing whitespaces.
+UPDATE sales SET retailer = TRIM(retailer);
+UPDATE sales SET region = TRIM(region);
+UPDATE sales SET state = TRIM(state);
+UPDATE sales SET city = TRIM(city);
+UPDATE sales SET product = TRIM(product);
+UPDATE sales SET sales_method = TRIM(sales_method);
+```
+
+24. Checked for duplicate rows but did not find any.
+```sql
+-- 22. Checked for duplicate rows. No duplicate rows were found.
+SELECT retailer, retailer_id, invoice_date, region, state, city, product, price_per_unit,
+	units_sold, total_sales, operating_profit, sales_method, COUNT(*) AS duplicate_count
+FROM sales
+GROUP BY retailer, retailer_id, invoice_date, region, state, city, product, price_per_unit,
+	units_sold, total_sales, operating_profit, sales_method
+HAVING COUNT(*) > 1;
+```
+
+25. Configured Not Null Constraint on retailer_id, invoice_date, units_sold, total_sales and operating_profit column since if any of them are Null then it’s not a valid sales transaction for analysis.
+```sql
+-- 23. Configured NOT NULL Constraint.
+ALTER TABLE `adidas`.`sales` 
+CHANGE COLUMN `retailer_id` `retailer_id` INT NOT NULL,
+CHANGE COLUMN `invoice_date` `invoice_date` DATE NOT NULL,
+CHANGE COLUMN `units_sold` `units_sold` INT NOT NULL,
+CHANGE COLUMN `total_sales` `total_sales` INT NOT NULL,
+CHANGE COLUMN `operating_profit` `operating_profit` INT NOT NULL;
+```
+
+26. Added a new column sales_id to sales table to be used as the Primary key.
+```sql
+-- 24. Added sales_id column as Primary Key.
+ALTER TABLE sales ADD COLUMN sales_id INT AUTO_INCREMENT PRIMARY KEY FIRST;
+```
+
+27. Final overview of table structure.
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Data%20Cleaning%20Images/Final%20Table%20Structure.PNG" width="70%" height="70%"> </div>
 
 
 
