@@ -121,9 +121,71 @@ WHERE retailer = '' OR retailer_id = '' OR retailer_id = 0
 	OR sales_method = '';
 ```
 
-<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Data%20Cleaning%20Images/Empty%20and%200%20values.PNG" width="70%" height="70%"> </div>
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Data%20Cleaning%20Images/Empty%20and%200%20values.PNG" width="100%" height="100%"> </div>
 
-12. 
+12. Since 0 value units_sold column basically indicates no sale I can delete these records. However I’ll not delete the empty values in price_per_unit column since these can be calculated by dividing total_sales and units_sold columns once they have appropriate datatypes for arithmetic operations.
+
+13. Deleted 0 values in units_sold column.
+```sql
+-- 10. Deleted '0' values in units_sold column.
+DELETE FROM sales WHERE units_sold = 0;
+```
+
+14. Conversion of units_sold column from text to int data type: The column contains comma character in value which needs to be removed before converting it into integer data type.
+```sql
+-- 11. Conversion of units_sold column from text to int data type. Replace unwanted comma character.
+UPDATE sales SET units_sold = REPLACE(units_sold, ',', '');
+ALTER TABLE sales MODIFY COLUMN units_sold int;
+```
+
+15. Now since both total_sales and units_sold columns have int data type, we can calculate the actual price_per_unit to replace the Empty values in the dataset.
+```sql
+-- 12. Calculated empty price_per_unit values based on total_sales and units_sold columns.
+UPDATE sales SET price_per_unit = total_sales / units_sold WHERE price_per_unit = '';
+```
+
+16. Conversion of price_per_unit column from text to int data type: The column contains dollar character in value which needs to be removed before converting it into integer data type.
+```sql
+-- 13. Conversion of price_per_unit column from text to int data type. Replace unwanted dollar character.
+UPDATE sales SET price_per_unit = REPLACE(price_per_unit, '$', '');
+ALTER TABLE sales MODIFY COLUMN price_per_unit int;
+```
+
+17. Conversion of invoice_date column from text to date data type: The column contains values in dd-mm-yyyy format and so needs to be parsed to the MySQL Standard yyyy-mm-dd date format using STR_TO_DATE( ) function before converting it into date data type.
+```sql
+-- 14. Conversion of invoice_date column from text to date data type. Parse date text to yyyy-mm-dd standard format before converting data type.
+UPDATE sales SET invoice_date = STR_TO_DATE(invoice_date, '%d-%m-%Y');
+ALTER TABLE sales MODIFY COLUMN invoice_date date;
+```
+If I hadn’t parsed the invoice_date column using Alteryx DateTime tool, I would have had dates both in ‘dd-mm-yyyy’ and ‘mm-dd-yyyy’ formats. In such a case I would have to apply case statement during parsing using STR_TO_DATE( ) function.
+```sql
+UPDATE sales SET invoice_date =
+	CASE
+		WHEN invoice_date LIKE '____-__-__' THEN STR_TO_DATE(`invoice_date `, '%Y-%m-%d')
+		WHEN invoice_date LIKE '__-__-____' THEN STR_TO_DATE(`invoice_date `, '%d-%m-%Y')
+	END;
+```
+
+18. Recheck column data types and formatting. Post changing retailer_id, invoice_date, price_per_unit, units_sold, total_sales and operating_profit columns, all column data types are now correct.
+```sql
+-- 15. Recheck column data types and formatting.
+SELECT COLUMN_NAME, DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'sales';
+```
+
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Data%20Cleaning%20Images/Final%20Column%20Datatypes.PNG" width="20%" height="20%"> </div>
+
+19. The retailer, region, state, city, product and sales_method columns have text data type which takes up too much space and does not limit the input value length. Hence I changed the data type to varchar for all these columns.
+```sql
+-- 16. Changed retailer, region, state, city, product and sales_method columns to varchar data type.
+ALTER TABLE sales MODIFY COLUMN retailer varchar(30);
+ALTER TABLE sales MODIFY COLUMN region varchar(30);
+ALTER TABLE sales MODIFY COLUMN state varchar(30);
+ALTER TABLE sales MODIFY COLUMN city varchar(30);
+ALTER TABLE sales MODIFY COLUMN product varchar(100);
+ALTER TABLE sales MODIFY COLUMN sales_method varchar(30);
+```
+
+20. 
 
 
 
