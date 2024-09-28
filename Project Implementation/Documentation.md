@@ -5,6 +5,7 @@
 ## Phases of Implementation
 - [Phase 1: Data Import](#phase-1-data-import)
 - [Phase 2: Data Cleaning](#phase-2-data-cleaning)
+- [Phase 3: Data Modelling](#phase-3-data-modelling)
 
 ---
 
@@ -260,7 +261,21 @@ ALTER TABLE sales ADD COLUMN sales_id INT AUTO_INCREMENT PRIMARY KEY FIRST;
 27. Final overview of table structure.
 <div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Data%20Cleaning%20Images/Final%20Table%20Structure.PNG" width="70%" height="70%"> </div>
 
+---
 
+## Phase 3: Data Modelling
+The Fact Table and 5 Dimension Tables were connected in a Star Schema. The configured PKey → FKey relationships are as follows:
+|Primary Key (1)||Foreign Key (*)|
+|-|-|-|
+|product_id (dim_product)|→|product_id (fact_sales)|
+|retailer_uid (dim_retailer)|→|retailer_uid (fact_sales)|
+|salesmethod_id (dim_salesmethod)|→|salesmethod_id (fact_sales)|
+|location_id (dim_location)|→|location_id (fact_sales)|
+|date (dim_date)|→|invoice_date (fact_sales)|
+
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Data%20Model/Adidas%20US%20Sales%20Data%20Model.PNG" width="100%" height="100%"> </div>
+
+---
 
 
 
