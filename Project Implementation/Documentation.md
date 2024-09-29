@@ -6,6 +6,7 @@
 - [Phase 1: Data Import](#phase-1-data-import)
 - [Phase 2: Data Cleaning](#phase-2-data-cleaning)
 - [Phase 3: Data Modelling](#phase-3-data-modelling)
+- [Phase 4: Measures](#phase-4-measures)
 
 ---
 
@@ -289,7 +290,18 @@ The Fact Table and 5 Dimension Tables were connected in a Star Schema. The confi
 
 ---
 
+## Phase 5: Dashboard Design
 
+### Color Pallet:
+
+Color Hex Codes: `Dark Red: #780000, Med Red: #9D0910, Light Red: #DF817A, Neutral: #FFFFFF, Light Blue: #B3CDDE, Med Blue: #669BBC, Dark Blue: #336683`
+
+Color Standard Assignment:
+1. `Kohl’s - Dark Red: #780000, Walmart - Med Red: #9D0910, Amazon - Light Red: #DF817A, Sports Direct - Light Blue: #B3CDDE, Foot Locker - Med Blue: #669BBC, West Gear - Dark Blue: #336683`
+2. `Women’s Apparel - Dark Red: #780000, Women’s Street Footwear - Med Red: #9D0910, Women’s Athletic Footwear - Light Red: #DF817A, Men’s Apparel - Light Blue: #B3CDDE, Men’s Athletic Footwear - Med Blue: #669BBC, Men’s Street Footwear - Dark Blue: #336683`
+3. `South - Med Red: #9D0910, Midwest - Light Red: #DF817A, Southeast - Light Blue: #B3CDDE, Northeast - Med Blue: #669BBC, West - Dark Blue: #336683`
+4. `In-store - Med Red: #9D0910, Outlet - Med Blue: #669BBC, Online - Dark Blue: #336683`
+5. `Summer - Med Red: #9D0910, Spring - Light Red: #DF817A, Autumn - Light Blue: #B3CDDE, Winter - Med Blue: #669BBC`
 
 
 
