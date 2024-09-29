@@ -277,6 +277,17 @@ The Fact Table and 5 Dimension Tables were connected in a Star Schema. The confi
 
 ---
 
+## Phase 4: Measures
+
+- Revenue: Sum of Sales. (Reference table: fact_sales) -> `Revenue = SUM(fact_sales[total_sales])`
+- Operating Profit: Sum of Operating Profits. (Reference table: fact_sales) -> `Operating Profit = SUM(fact_sales[operating_profit])`
+- Units Sold: Sum of units sold. (Reference table: fact_sales) -> `Units Sold = SUM(fact_sales[units_sold])`
+- Operating Profit Margin %: Percentage of Operating Profit over Total Sales. (Reference table: fact_sales) -> `Operating Profit Margin % = DIVIDE([Operating Profit], [Revenue], 0)`
+- Average Selling Price: Average Price per Unit of product. (Reference table: fact_sales) -> `Average Selling Price = AVERAGE(fact_sales[price_per_unit])`
+- Operating Profit per Unit: Operating Profit per Unit of product sold. (Reference table: fact_sales) -> `Operating Profit per Unit = DIVIDE([Operating Profit], [Units Sold], 0)`
+- Revenue per Unit: Total Sales per Unit of product sold. (Reference table: fact_sales) -> `Revenue per Unit = DIVIDE([Revenue], [Units Sold], 0)`
+
+---
 
 
 
