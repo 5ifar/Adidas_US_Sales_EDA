@@ -7,6 +7,7 @@
 - [Phase 2: Data Cleaning](#phase-2-data-cleaning)
 - [Phase 3: Data Modelling](#phase-3-data-modelling)
 - [Phase 4: Measures](#phase-4-measures)
+- [Phase 5: Dashboard Design](#phase-5-dashboard-design)
 
 ---
 
@@ -292,7 +293,7 @@ The Fact Table and 5 Dimension Tables were connected in a Star Schema. The confi
 
 ## Phase 5: Dashboard Design
 
-### Color Pallet:
+### 5.1 Color Pallet:
 
 Color Hex Codes: `Dark Red: #780000, Med Red: #9D0910, Light Red: #DF817A, Neutral: #FFFFFF, Light Blue: #B3CDDE, Med Blue: #669BBC, Dark Blue: #336683`
 
@@ -302,6 +303,15 @@ Color Standard Assignment:
 3. `South - Med Red: #9D0910, Midwest - Light Red: #DF817A, Southeast - Light Blue: #B3CDDE, Northeast - Med Blue: #669BBC, West - Dark Blue: #336683`
 4. `In-store - Med Red: #9D0910, Outlet - Med Blue: #669BBC, Online - Dark Blue: #336683`
 5. `Summer - Med Red: #9D0910, Spring - Light Red: #DF817A, Autumn - Light Blue: #B3CDDE, Winter - Med Blue: #669BBC`
+
+### 5.2 Filter Panel:
+
+- Added Filter Slicers for Fields: `Year, Season , Region, State, City, Product, Retailer & Sales Method`. All Slicers affect the entire Dashboard.
+- Configured Clear Filters button to remove any applied filters on visuals.
+
+### 5.3 KPIs Panel:
+
+- Added Simple Card visual KPIs using Measures: `Revenue, Units Sold, Operating Profit, Operating Profit Margin %, Average Selling Price, Revenue per Unit and Operating Profit per  Unit`.
 
 
 
