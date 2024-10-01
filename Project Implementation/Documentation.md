@@ -298,11 +298,11 @@ The Fact Table and 5 Dimension Tables were connected in a Star Schema. The confi
 Color Hex Codes: `Dark Red: #780000, Med Red: #9D0910, Light Red: #DF817A, Neutral: #FFFFFF, Light Blue: #B3CDDE, Med Blue: #669BBC, Dark Blue: #336683`
 
 Color Standard Assignment:
-1. `Kohl’s - Dark Red: #780000, Walmart - Med Red: #9D0910, Amazon - Light Red: #DF817A, Sports Direct - Light Blue: #B3CDDE, Foot Locker - Med Blue: #669BBC, West Gear - Dark Blue: #336683`
-2. `Women’s Apparel - Dark Red: #780000, Women’s Street Footwear - Med Red: #9D0910, Women’s Athletic Footwear - Light Red: #DF817A, Men’s Apparel - Light Blue: #B3CDDE, Men’s Athletic Footwear - Med Blue: #669BBC, Men’s Street Footwear - Dark Blue: #336683`
-3. `South - Med Red: #9D0910, Midwest - Light Red: #DF817A, Southeast - Light Blue: #B3CDDE, Northeast - Med Blue: #669BBC, West - Dark Blue: #336683`
-4. `In-store - Med Red: #9D0910, Outlet - Med Blue: #669BBC, Online - Dark Blue: #336683`
-5. `Summer - Med Red: #9D0910, Spring - Light Red: #DF817A, Autumn - Light Blue: #B3CDDE, Winter - Med Blue: #669BBC`
+1. Kohl’s - Dark Red: `#780000`, Walmart - Med Red: `#9D0910`, Amazon - Light Red: `#DF817A`, Sports Direct - Light Blue: `#B3CDDE`, Foot Locker - Med Blue: `#669BBC`, West Gear - Dark Blue: `#336683`
+2. Women’s Apparel - Dark Red: `#780000`, Women’s Street Footwear - Med Red: `#9D0910`, Women’s Athletic Footwear - Light Red: `#DF817A`, Men’s Apparel - Light Blue: `#B3CDDE`, Men’s Athletic Footwear - Med Blue: `#669BBC`, Men’s Street Footwear - Dark Blue: `#336683`
+3. South - Med Red: `#9D0910`, Midwest - Light Red: `#DF817A`, Southeast - Light Blue: `#B3CDDE`, Northeast - Med Blue: `#669BBC`, West - Dark Blue: `#336683`
+4. In-store - Med Red: `#9D0910`, Outlet - Med Blue: `#669BBC`, Online - Dark Blue: `#336683`
+5. Summer - Med Red: `#9D0910`, Spring - Light Red: `#DF817A`, Autumn - Light Blue: `#B3CDDE`, Winter - Med Blue: `#669BBC`
 
 ### 5.2 Filter Panel:
 
@@ -313,17 +313,23 @@ Color Standard Assignment:
 
 - Added Simple Card visual KPIs using Measures: `Revenue, Units Sold, Operating Profit, Operating Profit Margin %, Average Selling Price, Revenue per Unit and Operating Profit per  Unit`.
 
+### 5.4 KPI Distribution Donut Visuals:
 
+- Configured a Field Parameter: `RPRSS Parameter = {("Retailer", NAMEOF('dim_retailer'[retailer]), 0), ("Product", NAMEOF('dim_product'[product]), 1), ("Region", NAMEOF('dim_location'[region]), 2), ("Sales Method", NAMEOF('dim_salesmethod'[sales_method]), 3), ("Season", NAMEOF('dim_date'[season]), 4)}` to be used as the distribution parameter. It provides `Retailer, Product, region, Sales Method and Season fields` as a Slicer.
+- Created 3 Donut charts with Revenue, Operating Profit and Units Sold fields to be split based on legend field controlled through the RPRSS Parameter.
+- Color coding for this visual documented in the Color Palette section.
 
+### 5.5 KPI Trend Line Visuals:
 
+- Configured a Field Parameter: `ROU Parameter = {("Revenue", NAMEOF('Measure'[Revenue]), 0), ("Operating Profit", NAMEOF('Measure'[Operating Profit]), 1), ("Units Sold", NAMEOF('Measure'[Units Sold]), 2)}` to be used as the field plotted across monthly time frame. It provides Revenue, Operating Profit and Units Sold fields as a Slicer.
+- Created two buttons - Split Trend and Overall Trend to provide the functionality of viewing the ROU Field Parameter Trend either Overall or Split based on the field selected in the RPRSS Parameter Slicer using Bookmarks: ROU - RPRSS Split Trend and ROU Overall Trend.
+- Color coding for this visual documented in the Color Palette section.
 
+### 5.6 State and City level Metric Trend Visuals:
 
+- Created a Line & Clustered Column Chart with Operating Profit % and 3 configurable metrics: `Revenue, Operating Profit and Units Sold`. The comparison plot metrics can be selected using custom buttons created that operate using Bookmarks on the visual.
+- The visual is also configured to be displayed either on `State` or `City` level data using custom buttons that operate using Bookmarks. They can be combined with 3 plot metrics to plot 6 different comparative plots.
+- Due to the large number of states and cities (both around 50 each) the business user might find the visual too overwhelming with details so for such cases preset `Top N Filters: All States/Cities, Top 20, Top 10 and Top 5` filters have been provided using a combination of custom buttons and bookmarks.
+- Using the combination of 3 plot metrics, State & City level buttons and 4 Top N Filters, the visual provides overall 24 comparative views for improving user experience.
 
-
-
-
-
-
-
-
-
+---
