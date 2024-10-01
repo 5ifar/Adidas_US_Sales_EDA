@@ -92,7 +92,12 @@ ROCCC Evaluation:
 
 ---
 
+## Project Implementation:
+Please find the documentation links for the project phase-wise implementation below:
+- [Phase 1: Data Import](https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Project%20Implementation/Documentation.md#phase-1-data-import)
+- [Phase 2: Data Cleaning](https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Project%20Implementation/Documentation.md#phase-2-data-cleaning)
+- [Phase 3: Data Modelling](https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Project%20Implementation/Documentation.md#phase-3-data-modelling)
+- [Phase 4: Measures](https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Project%20Implementation/Documentation.md#phase-4-measures)
+- [Phase 5: Dashboard Design](https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Project%20Implementation/Documentation.md#phase-5-dashboard-design)
 
-
-
-
+---
