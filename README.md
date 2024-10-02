@@ -29,7 +29,7 @@ Please find the sectional links for the project below:
 
 ## Project Objective:
 
-The objective of this project is to analyze mock Adidas US Sales data for 2020-21 by cleaning and organizing the dataset in MySQL Workbench, performing Exploratory Data Analysis (EDA) using Python and creating an interactive Power BI dashboard. The goal is to provide actionable insights into retailer performance, regional sales distribution, and sales trends across various channels to optimize business strategies and drive growth.
+The objective of this project is to analyze Adidas US Sales data for 2020-21 by cleaning and organizing the dataset in MySQL Workbench, performing Exploratory Data Analysis (EDA) using Python and creating an interactive Power BI dashboard. The goal is to provide actionable insights into retailer performance, regional sales distribution, and sales trends across various channels to identify growth opportunities, optimize business strategies and drive profitability.
 
 ---
 
