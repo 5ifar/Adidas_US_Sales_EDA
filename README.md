@@ -104,75 +104,95 @@ Please find the documentation links for the project phase-wise implementation be
 ## Data-driven Insights and Recommendations:
 
 ### 1.1 KPI Performance Breakdown by Retailers
-<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%201.1.PNG" width="100%" height="100%"> </div>
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%201.1.PNG" width="75%" height="75%"> </div>
 
 **Insight:** West Gear, Foot locker & Sports Direct emerge as the Top Retailers, collectively accounting for 72% of Total Sales, Operating Profit and Units Sold.
 
 **Recommendation:** Focus marketing efforts and partnership expansions with top-performing retailers like West Gear and Foot Locker to maintain sales momentum, while identifying ways to improve sales through under performing retailers like Amazon and Walmart.
 
 ### 1.2 KPI Performance Breakdown by Regions
-<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%201.2.PNG" width="100%" height="100%"> </div>
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%201.2.PNG" width="75%" height="75%"> </div>
 
 **Insight:** West & Northeast emerge as the Top Regions, collectively accounting for 51% of Total Sales, 47% of Operating Profit and 48% of Units Sold.
 
 **Recommendation:** Target marketing and distribution strategies in regions outside of West and Northeast to balance out sales distribution and explore operating profit growth in less saturated Midwest and South regions.
 
 ### 1.3 KPI Performance Breakdown by Products 
-<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%201.3.PNG" width="100%" height="100%"> </div>
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%201.3.PNG" width="75%" height="75%"> </div>
 
 **Insight:** Men's Street Footwear, Women's Apparel & Men's Athletic Footwear emerge as the Top Products, collectively accounting for 60% of Total Sales, 61% of Operating Profit and 59% of Units Sold.
 
 **Recommendation:** Increase product offerings and seasonal promotions in high-demand categories to maximize sales, while considering opportunities for product diversification in Men’s Apparel and Women’s Athletic Footwear categories.
 
 ### 1.4 KPI Performance Breakdown by Seasons
-<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%201.4.PNG" width="100%" height="100%"> </div>
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%201.4.PNG" width="75%" height="75%"> </div>
 
 **Insight:** Summer emerges as the Top Season, exclusively accounting for 29% of Total Sales, 29% of Operating Profit and 26% of Units Sold. Business surge in Summer can possibly be attributed to season break shopping.
 
 **Recommendation:** Launch seasonal campaigns and discounts during summer, focusing on product lines with proven demand. Enhance year-round sales by analyzing other seasonal sales driving factors.
 
 ### 1.5 KPI Performance Breakdown by Sales Methods
-<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%201.5.PNG" width="100%" height="100%"> </div>
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%201.5.PNG" width="75%" height="75%"> </div>
 
 **Insight:** Online emerges as the Top Sales method, exclusively accounting for 37% & 38% by Total Sales & Units Sold respectively. While In-store exclusively accounting for 38%, emerges as the Top Sales method by Operating Profit.
 
 **Recommendation:** Prioritize omnichannel strategies that enhance both Online sales platforms and Outlet experiences. Further invest in the Online segment to increase profitability and maintain margins.
 
 ### 2.1 Temporal Trend - Overall
-<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%202.1.PNG" width="100%" height="100%"> </div>
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%202.1.PNG" width="50%" height="50%"> </div>
 
 **Insight:** Total Sales, Operating Profit & Units Sold in 2021 were roughly 4 times, 4.5 times & 4.3 times respectively higher on average than in 2020 possibly due to bounce back in consumption post Covid-19.
 
 **Recommendation:** Analyze post-COVID purchasing trends to identify and predict consumer behavior changes, leveraging this momentum to strategize for sustained growth in 2022 and beyond.
 
 ### 2.2 Temporal Trend by Retailers
-<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%202.2.PNG" width="100%" height="100%"> </div>
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%202.2.PNG" width="50%" height="50%"> </div>
 
 **Insight:** All the 3 metrics declined towards the end of 2020 but recovered back to base levels around mid-2021 after Covid-19 lockdown was lifted. While West Gear dominated overall in 2020, it's position was taken over by Foot Locker & Sports Direct in 2021.
 
 **Recommendation:** Strengthen partnerships with Foot Locker and Sports Direct by offering exclusive promotions and products, while also revamping marketing strategies for West Gear to boost competitiveness.
 
 ### 2.3 Temporal Trend by Products
-<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%202.3.PNG" width="100%" height="100%"> </div>
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%202.3.PNG" width="50%" height="50%"> </div>
 
 **Insight:** All the 3 metrics reached their lowest values in June 2020 and climbed back to their highest value in July - Aug 2021. Men's Street Footwear category dominates all metrics across both years.
 
 **Recommendation:** Use Predictive analysis to prepare for future seasonal demand spikes, particularly for Men’s Street Footwear, ensuring sufficient inventory and targeted promotions during peak periods.
 
 ### 2.4 Temporal Trend by Regions
-<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%202.4.PNG" width="100%" height="100%"> </div>
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%202.4.PNG" width="50%" height="50%"> </div>
 
 **Insight:** While West region dominates all 3 metrics in the first half of 2021, it's position is periodically challenged post June 2021 by MidWest, South & Northeast regions. South region experience a sudden surge of all 3 metrics in the month of August & September.
 
 **Recommendation:** Reallocate resources and marketing focus to regions like South and Northeast during times of surging demand like August and September to capitalize on market shifts and seasonal sales variations.
 
 ### 2.5 Temporal Trend by Seasons
-<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%202.5.PNG" width="100%" height="100%"> </div>
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%202.5.PNG" width="50%" height="50%"> </div>
 
 **Insight:** Women's Apparel sells more units than Men's Athletic Footwear in Spring unlike rest of the seasons.
 
 **Recommendation:** Tailor marketing campaigns to promote Women’s Apparel during the Spring season, capitalizing on the higher demand and ensuring stock levels are optimized for this trend.
 
+### 3.1 Comparative Analysis of Products by Retailers
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%203.1.PNG" width="50%" height="50%"> </div>
+
+**Insight:** Contrasting overall trend, Sports Direct & Walmart generate more Operating Profit from Women's Apparel than Men's Street Footwear.
+
+**Recommendation:** Increase Women’s Apparel inventory and promotions through Sports Direct & Walmart, optimizing profitability from these retailers by aligning product lines with customer preferences.
+
+### 3.2 Comparative Analysis of Retailers over Regions
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%203.2.PNG" width="50%" height="50%"> </div>
+
+**Insight:** Foot Locker emerges as the Top Retailer across all 3 metrics in all regions except South & West regions, where Sports Direct & West Gear dominate respectively.
+
+**Recommendation:** Refine region-specific strategies by leveraging Foot Locker’s success in some regions and strengthening Sports Direct & West Gear’s market presence in South & West regions with exclusive product offerings or targeted promotions.
+
+### 3.3 Comparative Analysis of Products over Regions
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%203.3.PNG" width="50%" height="50%"> </div>
+
+**Insight:** Contrasting overall trend, in South region Women's Apparel dominates Men's Street Footwear in Total Sales & Operating Profit. In West region, Men's Athletic Footwear dominates Women's Apparel in Units Sold.
+
+**Recommendation:** Prioritize Women’s Apparel marketing campaigns and promotions in the South region, focusing on demand growth opportunities for this product line to maximize revenue.
 
 
 
@@ -187,8 +207,8 @@ Please find the documentation links for the project phase-wise implementation be
 
 
 
-### 2.1 
-<div align="center"> <img src="" width="100%" height="100%"> </div>
+### 3.1 
+<div align="center"> <img src="" width="50%" height="50%"> </div>
 
 **Insight:** 
 
