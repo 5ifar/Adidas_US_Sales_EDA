@@ -194,6 +194,19 @@ Please find the documentation links for the project phase-wise implementation be
 
 **Recommendation:** Prioritize Women’s Apparel marketing campaigns and promotions in the South region, focusing on demand growth opportunities for this product line to maximize revenue.
 
+### 4.1 Geospatial Analysis of States
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%204.1.PNG" width="50%" height="50%"> </div>
+
+**Insight:** New York, California, Florida and Texas emerge as the Top 4 States across all 3 metrics. Between the Top 4 States, Texas lags behind in Total Sales, California & Texas lag behind in Operating Profit and Florida lags behind in Units Sold.
+
+**Recommendation:** Implement targeted regional strategies to address the specific underperformance in these states, such as customized pricing strategies, localized advertising, or new retail partnerships.
+
+### 4.2 Geospatial Analysis of Top 20 States & Cities
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%204.2.PNG" width="50%" height="50%"> </div>
+
+**Insight:** New York, California and Florida emerge as the Top 3 States by Total Sales & Operating Profit while New York, California and Texas emerge as the Top 3 States by Units Sold. New York, Charleston and San Francisco emerge as the Top 3 Cities by Total Sales. Charleston, New York and Miami emerge as the Top 3 Cities by Operating Profit. New York, Charleston and Houston emerge as the Top 3 Cities by Units Sold.
+
+**Recommendation:** Focus efforts on improving sales performance in Texas by understanding the local market dynamics and launching targeted marketing campaigns to boost overall sales and profitability.
 
 
 
@@ -204,10 +217,7 @@ Please find the documentation links for the project phase-wise implementation be
 
 
 
-
-
-
-### 3.1 
+### 4.1 
 <div align="center"> <img src="" width="50%" height="50%"> </div>
 
 **Insight:** 
