@@ -17,7 +17,7 @@ Please find the sectional links for the project below:
   - [Data Integrity](#data-integrity)
 - [Data Model](#data-model)
 - [Project Implementation](#project-implementation)
-- [Data-driven Insights](#data-driven-insights)
+- [Data-driven Insights and Recommendations](#data-driven-insights-and-recommendations)
 - [Conclusion](#conclusion)
 
 ---
@@ -208,21 +208,30 @@ Please find the documentation links for the project phase-wise implementation be
 
 **Recommendation:** Focus efforts on improving sales performance in Texas by understanding the local market dynamics and launching targeted marketing campaigns to boost overall sales and profitability.
 
+### 5.1 Price per Unit Distribution by Products
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%205.1.PNG" width="75%" height="75%"> </div>
 
+**Insight:** While Women's Apparel has the highest price per unit outliers, Women's Apparel & Men's Apparel emerge as the highest median price products with the cost of 51 USD and 50 USD per unit respectively.
 
+**Recommendation:** Increase investment in premium pricing strategies for Women’s Apparel to maintain profitability, while also exploring opportunities to introduce higher-end product lines in other categories.
 
+### 5.2 Operating Profit % Distribution by Products
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%205.2.PNG" width="75%" height="75%"> </div>
 
+**Insight:** Men's & Women's Apparel have the highest Operating Profit % outliers and Women's Apparel has the highest median Operating Profit % of roughly around 7 %.
 
+**Recommendation:**  Adidas should prioritize expanding its apparel lines, particularly Women's Apparel. Strategic investments in product development, targeted marketing, and optimized inventory for these categories can help capitalize on high profitability potential.
 
+### 5.3 Key Sales Metrics Correlation
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%205.3.PNG" width="50%" height="50%"> </div>
 
+**Insight:** Total Sales and Operating Profit metrics show strongest correlation while Total Sales and Price per Unit metrics show weakest correlation.
 
-
-### 4.1 
-<div align="center"> <img src="" width="50%" height="50%"> </div>
-
-**Insight:** 
-
-**Recommendation:** 
+**Recommendation:** Focus on driving sales volume through strategic pricing and promotional tactics to boost profitability, while exploring ways to optimize price per unit for better margin control.
 
 ---
 
+## Conclusion:
+The Adidas US Sales Analysis for FY 2020-21 uncovered key areas of strength and opportunities for growth. Top-performing retailers like West Gear, Foot Locker, and Sports Direct, along with regions such as the West and Northeast, have been crucial contributors to sales and profit. Similarly, product categories like Men's Street Footwear and Women's Apparel have emerged as highly profitable segments. However, disparities in performance across regions, products, and sales channels highlight the need for strategic adjustments. Strengthening underperforming regions like the Midwest and Nebraska, optimizing online sales, and leveraging high-margin product categories, especially Women’s Apparel, offer Adidas the potential to enhance operational efficiency and drive sustainable growth. By focusing on these actionable insights, Adidas can optimize its business strategies to fuel future profitability and market expansion.
+
+---
