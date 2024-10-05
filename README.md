@@ -138,6 +138,45 @@ Please find the documentation links for the project phase-wise implementation be
 
 **Recommendation:** Prioritize omnichannel strategies that enhance both Online sales platforms and Outlet experiences. Further invest in the Online segment to increase profitability and maintain margins.
 
+### 2.1 Temporal Trend - Overall
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%202.1.PNG" width="100%" height="100%"> </div>
+
+**Insight:** Total Sales, Operating Profit & Units Sold in 2021 were roughly 4 times, 4.5 times & 4.3 times respectively higher on average than in 2020 possibly due to bounce back in consumption post Covid-19.
+
+**Recommendation:** Analyze post-COVID purchasing trends to identify and predict consumer behavior changes, leveraging this momentum to strategize for sustained growth in 2022 and beyond.
+
+### 2.2 Temporal Trend by Retailers
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%202.2.PNG" width="100%" height="100%"> </div>
+
+**Insight:** All the 3 metrics declined towards the end of 2020 but recovered back to base levels around mid-2021 after Covid-19 lockdown was lifted. While West Gear dominated overall in 2020, it's position was taken over by Foot Locker & Sports Direct in 2021.
+
+**Recommendation:** Strengthen partnerships with Foot Locker and Sports Direct by offering exclusive promotions and products, while also revamping marketing strategies for West Gear to boost competitiveness.
+
+### 2.3 Temporal Trend by Products
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%202.3.PNG" width="100%" height="100%"> </div>
+
+**Insight:** All the 3 metrics reached their lowest values in June 2020 and climbed back to their highest value in July - Aug 2021. Men's Street Footwear category dominates all metrics across both years.
+
+**Recommendation:** Use Predictive analysis to prepare for future seasonal demand spikes, particularly for Men’s Street Footwear, ensuring sufficient inventory and targeted promotions during peak periods.
+
+### 2.4 Temporal Trend by Regions
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%202.4.PNG" width="100%" height="100%"> </div>
+
+**Insight:** While West region dominates all 3 metrics in the first half of 2021, it's position is periodically challenged post June 2021 by MidWest, South & Northeast regions. South region experience a sudden surge of all 3 metrics in the month of August & September.
+
+**Recommendation:** Reallocate resources and marketing focus to regions like South and Northeast during times of surging demand like August and September to capitalize on market shifts and seasonal sales variations.
+
+### 2.5 Temporal Trend by Seasons
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Assets/Insights%20Images/Insight%202.5.PNG" width="100%" height="100%"> </div>
+
+**Insight:** Women's Apparel sells more units than Men's Athletic Footwear in Spring unlike rest of the seasons.
+
+**Recommendation:** Tailor marketing campaigns to promote Women’s Apparel during the Spring season, capitalizing on the higher demand and ensuring stock levels are optimized for this trend.
+
+
+
+
+
 
 
 
