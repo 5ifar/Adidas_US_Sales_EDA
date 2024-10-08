@@ -9,7 +9,7 @@ The entire project has been implemented using Python 3 on Jupyter Notebook, MySQ
 ## Contents:
 Please find the sectional links for the project below:
 - [Adidas US Sales Live Dashboard Link]()
-- [Adidas US Sales EDA Kaggle Notebook]()
+- [Adidas US Sales EDA Kaggle Python Notebook](https://www.kaggle.com/code/sagarmorework/adidas-us-sales-eda)
 - [Project Objective](#project-objective)
 - [Tools used & Methodologies implemented](#tools-used)
 - [About the Dataset](#about-the-dataset)
@@ -25,7 +25,7 @@ Please find the sectional links for the project below:
 ---
 
 ## [Adidas US Sales Live Dashboard Link]()
-## [Adidas US Sales EDA Kaggle Notebook]()
+## [Adidas US Sales EDA Kaggle Python Notebook](https://www.kaggle.com/code/sagarmorework/adidas-us-sales-eda)
 
 ---
 
