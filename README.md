@@ -18,6 +18,7 @@ Please find the sectional links for the project below:
   - [Data Integrity](#data-integrity)
 - [Data Model](#data-model)
 - [Project Implementation](#project-implementation)
+- [Adidas US Sales Dashboard Overview](#adidas-us-sales-dashboard-overview)
 - [Data-driven Insights and Recommendations](#data-driven-insights-and-recommendations)
 - [Conclusion](#conclusion)
 
@@ -100,6 +101,12 @@ Please find the documentation links for the project phase-wise implementation be
 - [Phase 3: Data Modelling](https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Project%20Implementation/Documentation.md#phase-3-data-modelling)
 - [Phase 4: Measures](https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Project%20Implementation/Documentation.md#phase-4-measures)
 - [Phase 5: Dashboard Design](https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Project%20Implementation/Documentation.md#phase-5-dashboard-design)
+
+---
+
+## Adidas US Sales Dashboard Overview:
+
+<div align="center"> <img src="https://github.com/5ifar/Adidas_US_Sales_EDA/blob/main/Power%20BI%20Dashboard/Dashboard%20Images/Adidas%20US%20Sales%20Dashboard.png" width="100%" height="100%"> </div>
 
 ---
 
